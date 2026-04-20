@@ -44,7 +44,7 @@ Vi bruker **ikke**: løkker, arrays eller objekter.
 | Uke | Økt | Dato     | Innhold                                                     |
 | --- | --- | -------- | ----------------------------------------------------------- |
 | 1   | 1   | man 20.4 | Intro + Verktøy + HTML + enkel CSS                          |
-| 1   | 2   | ons 22.4 | Layout (Flexbox/Grid) + Intro JS: funksjoner, DOM, onclick  |
+| 1   | 2   | ons 22.4 | Layout (Flexbox/Grid) + Intro JS: funksjoner, onclick  |
 | 2   | 1   | man 27.4 | Funksjoner med parametre: produsere HTML + endre CSS fra JS |
 | 2   | 2   | ons 29.4 | Variabler + aritmetiske operatorer + enkle if-setninger     |
 | 3   | 1   | man 4.5  | Funksjoner med returverdi = gjenbrukbare komponenter        |
