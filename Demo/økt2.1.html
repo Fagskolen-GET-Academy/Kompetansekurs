@@ -1,47 +1,90 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="no">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
+	<meta charset="UTF-8" />
+	<title>Endre CSS fra JavaScript</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			padding: 32px;
+			text-align: center;
+		}
 
-        .app{
-            width: 400px;
-            height: 400px;
-            background-color: blue;
-        }
+		#boks {
+			width: 200px;
+			height: 200px;
+			background-color: #cccccc;
+			border-radius: 12px;
+			margin: 24px auto;
+		}
 
-        .cell{
-            background-color: pink;
-            border: 1px solid black;
-        }
+		button {
+			font-size: 18px;
+			padding: 10px 20px;
+			margin: 6px;
+			cursor: pointer;
+			border: none;
+			border-radius: 8px;
+			color: white;
+		}
 
-    </style>
+		.button-red {
+			background-color: red;
+		}
+
+		.button-green {
+			background-color: green;
+		}
+
+		.button-blue {
+			background-color: blue;
+		}
+
+		.button-purple {
+			background-color: purple;
+		}
+	</style>
 </head>
 
 <body>
-    <div id="app" class="app">
-        <div class="cell">1</div>
-        <div class="cell">2</div>
-        <div class="cell">3</div>
-    </div>
-    <button onclick="changeDisplay()">Change display</button>
-    <button onclick="changeToRed('red')">Change to Red</button>
+	<h1>Fargevelger</h1>
+
+	<div id="boks">
 
 
+	</div>
+	<button onclick="changeColour('red')" class="button-red">Red</button>
+	<button onclick="changeColour('green')" class="button-green">Green</button>
+	<button onclick="changeColour('blue')" class="button-blue">Blue</button>
+	<button onclick="changeColour('purple')" class="button-purple">Purple</button>
 
-    <script>
-      function changeDisplay(){
-        document.getElementById("app").style.display = "flex"
-      }
+	<script>
 
-      function changeToRed(color){
-        document.getElementById("app").style.backgroundColor = color
-      }
-    </script>
+		console.log("outside fuction - before change")
+		console.log("element =", document.getElementById("boks").style.backgroundColor)
+		console.log("")
 
+		function changeColour(colour) {
+			console.log("inside fuction - before change")
+			console.log("element =", document.getElementById("boks").style.backgroundColor)
+			console.log("parameter =", colour)
+			console.log("")
+
+			document.getElementById("boks").style.backgroundColor = colour;
+
+			console.log("inside fuction - after change")
+			console.log("element =", document.getElementById("boks").style.backgroundColor)
+			console.log("parameter =", colour)
+			console.log("")
+
+		}
+
+		console.log("outside fuction - after change")
+		console.log("element =", document.getElementById("boks").style.backgroundColor)
+		console.log("")
+
+	</script>
 </body>
 
 </html>
