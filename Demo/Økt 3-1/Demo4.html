@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <p id="output">
+
+        </p>
+    </div>
+
+    <script>
+        function lagKort(tittel, tekst) {
+            return "<div class='kort'><span>📌</span><h2>" + tittel + "</h2><p>" + tekst + "</p></div>";
+        }
+
+        let card1 = lagKort("Html", "Struktur")
+
+        let card2 = lagKort("CSS", "Utsende")
+
+        let card3 = lagKort("Js", "Interaktivitet")
+
+        document.getElementById("output").innerHTML = `${card1} ${card2} ${card3}`
+    </script>
+</body>
+
+</html>
