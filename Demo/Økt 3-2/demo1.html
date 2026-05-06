@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+
+    <input type="text" placeholder="Skriv brukernavn" id="userName">
+    <input type="text" placeholder="Skriv passord" id="password">
+    <button onclick="logIn()">Log inn</button>
+    <p id="output"></p>
+    <script>
+
+        function logIn() {
+            let userName = document.getElementById("userName").value;
+            let password = document.getElementById("password").value;
+
+            const adminUser = "admin123"
+            const adminPassword = "fotball123"
+
+            if (userName == adminUser && adminPassword == password) {
+                document.getElementById("output").innerHTML = `Admin logget inn`
+            }
+            else {
+                document.getElementById("output").innerHTML = `Feil passord eller brukernavn`
+
+            }
+        }
+
+    </script>
 </body>
+
 </html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" id="navnInput">
+        <button onclick="visNavn()">Vis navn</button>
+        <p id="output"> </p>
+    </div>
+    <script>
+
+        function visNavn() {
+            let navn = document.getElementById("navnInput").value;
+
+            if (!navn) {
+                document.getElementById("output").innerHTML = "Du skrev ikke inn et navn.";
+            } else {
+                document.getElementById("output").innerHTML = "Hei, " + navn + "!";
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
