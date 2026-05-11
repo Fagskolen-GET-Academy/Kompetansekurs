@@ -1,11 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <div id="app">
+        <input type="text" id="nameInput">
+      <p id="output"></p>
+      <button onclick="updateName()">Endre navn</button>
+    </div>
+    <script>
+
+      //Model
+      let model = `Kenneth`;
+      let inputValue = document.getElementById("nameInput")
+
+      //View
+      function updateView() {
+        document.getElementById("output").innerHTML = model;
+      }
+
+      //Controller
+      function updateName() {
+        model = inputValue.value;
+        updateView();
+      }
+
+      updateView();
+    </script>
+  </body>
 </html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+
+        //Model
+      let model = 0;
+      let pointsPerClick = 1;  
+
+
+      //View
+      function updateView() {
+        document.getElementById("app").innerHTML = /*HTML*/ `
+        <h1>Min clicker spill</h1>
+        <p id="output">Mine poeng:${model} </p>
+        <button onclick="increasePoint()">Increase</button>
+        <button onclick="decreasePoint()">Decrease</button>
+        <button onclick="upgrade()">Upgrade</button>
+        `;
+      }
+
+      //Controller
+      function increasePoint(){
+        model += pointsPerClick;
+        updateView()
+      }
+
+      function decreasePoint(){
+        model -= pointsPerClick;
+        updateView()
+      }
+
+      function upgrade(){
+        if(model >= 10){
+            model = 0;
+            pointsPerClick += 1;
+            updateView()
+        }
+      }
+
+
+
+
+
+      updateView();
+    </script>
+  </body>
+</html>
