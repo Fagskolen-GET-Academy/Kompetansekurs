@@ -69,14 +69,13 @@
       const pattern = `<div></div>`;
       const highlightSquare = `<div class="selected"></div>`;
       const mainDiv = document.getElementById("app");
-      let squareIndex = 0;
 
       // Tegner brettet på nytt basert på squareIndex
       function showBoard() {
         mainDiv.innerHTML = ``;
-        drawPattern(squareIndex);
+        drawPattern(0);
         mainDiv.innerHTML += highlightSquare;
-        drawPattern(size - (squareIndex + 1));
+        drawPattern((size));
       }
 
       // Tegner et gitt antall tomme ruter
@@ -89,7 +88,6 @@
       // ----- DIN KODE STARTER HER -----
 
       // Brettet er 8x8 = 64 ruter.
-      // squareIndex er posisjonen til den gule ruten.
       // 0 er øverst til venstre. 63 er nederst til høyre.
       // Kall showBoard() for å tegne brettet.
 
