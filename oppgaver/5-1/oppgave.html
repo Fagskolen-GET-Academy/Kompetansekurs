@@ -73,9 +73,9 @@
       // Tegner brettet på nytt basert på squareIndex
       function showBoard() {
         mainDiv.innerHTML = ``;
-        drawPattern(0);
+        drawPattern(0);//endre her
         mainDiv.innerHTML += highlightSquare;
-        drawPattern((63));
+        drawPattern((63));//endre her
       }
 
       // Tegner et gitt antall tomme ruter
@@ -92,7 +92,6 @@
       // Kall showBoard() for å tegne brettet.
 
       // 1. Lag en variabel yellowSquareIndex som holder posisjonen til den gule ruten.
-      //    Siden skal vise brettet med én gang når den lastes.
 
       //Lag disse funksjoner og koble dem til knappene
       
